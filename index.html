@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Layout</title>
+    <style type="text/css">
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        margin: 0;
+        background-color: aquamarine;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        padding: 0;
+      }
+      .img {
+        border: 0;
+        object-fit: contain;
+      }
+      .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        background-color: #f7f7f7;
+      }
+      .main {
+        background-color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        border-spacing: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p {
+        color: gray;
+      }
+      .two-column {
+        display: flex;
+        padding: 0px;
+      }
+      .two-column .column {
+        width: 50%;
+        margin: 15px 22px;
+      }
+      .heading {
+        font-size: 18px;
+        margin-top: -20px;
+        color: #2c2d4f;
+        position: relative;
+      }
+      .heading::after {
+        content: "";
+        width: 44px;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: -13px;
+        background-color: #f15162;
+      }
+      .left-column {
+        width: 60%;
+        margin-left: 22px;
+        background-color: rgb(245, 239, 239);
+      }
+      .right-column {
+        width: 40%;
+        margin-right: 22px;
+        background-color: rgb(245, 239, 239);
+      }
+      @media screen and (max-width: 600px) {
+        .two-column {
+          flex-direction: column;
+        }
+        .two-column .column {
+          width: 100%;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .left-column {
+          width: 100%;
+          margin-left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .right-column {
+          width: 100%;
+          margin-right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .content {
+          padding: 30px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="wrapper">
+      <table class="main" width="100%">
+        <!-- --------logo section---- -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td style="padding: 15px 22px">
+                  <img src="/images/email-vantagefit-logo.png" width="150" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!----------border section-------- -->
+        <tr>
+          <td
+            style="
+              height: 2px;
+              background-color: rgb(245, 239, 239);
+              margin: 0px 22px;
+            "
+          ></td>
+        </tr>
+
+        <!---------header section-------------  -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td style="padding: 40px 22px 20px 22px">
+                  <p style="font-weight: 500">Hi John Travolta,</p>
+                  <h5 style="font-size: 17px; color: #2c2d4f">
+                    Welcome to Vantage Fit.
+                  </h5>
+                  <p
+                    style="
+                      font-size: 15px;
+                      padding-bottom: 20px;
+                      font-weight: 500;
+                      line-height: 22px;
+                    "
+                  >
+                    We are glad to see you take the first step towards a
+                    healthier lifestyle and maintaining a sound fitness regime
+                    with our app.
+                  </p>
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align: center">
+                        <img
+                          src="/images/welcome-image.png"
+                          alt="welcome-img"
+                          style="
+                            width: 100%;
+                            max-width: 300px;
+                            padding: 30px 0px;
+                          "
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                  <h5
+                    style="
+                      font-size: 17px;
+                      color: #2c2d4f;
+                      background-color: #f7f7f7;
+                      text-align: center;
+                      padding: 8px 0px;
+                    "
+                  >
+                    Here are the few things that you can do with Vantage Fit-
+                  </h5>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- -------------double column------------ -->
+        <!------------move section------------ -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-column">
+                  <table class="column">
+                    <tr>
+                      <td>
+                        <table>
+                          <tr>
+                            <td class="content">
+                              <h5 class="heading">Move Better</h5>
+                              <p style="font-size: 14px; line-height: 22px">
+                                Vantage Fit allows you to track and analyze
+                                various health activities like running, cycling,
+                                swimming, weight traning, and many more
+                                including your home workouts too.
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table class="column">
+                    <tr>
+                      <td>
+                        <table>
+                          <tr>
+                            <td>
+                              <img
+                                src="/images/movebetter.png"
+                                alt="Food-img"
+                                style="
+                                  width: 200px;
+                                  max-width: 200px;
+                                  object-fit: contain;
+                                  padding: 15px;
+                                "
+                              />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- ----------underline section-------->
+        <tr>
+          <td
+            style="
+              height: 2px;
+              background-color: rgb(245, 239, 239);
+              margin: 0px 22px;
+            "
+          ></td>
+        </tr>
+
+        <!-- ---------------double column------- -->
+        <!-- ----------healthier section -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-column" style="padding: 25px 0px 25px 0px">
+                  <table class="column">
+                    <tr>
+                      <td>
+                        <table>
+                          <tr>
+                            <td>
+                              <img
+                                src="/images/eathealthier.png"
+                                alt="Food-img"
+                                style="
+                                  width: 200px;
+                                  max-width: 200px;
+                                  object-fit: contain;
+                                  padding: 15px;
+                                "
+                              />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table class="column">
+                    <tr>
+                      <td>
+                        <table>
+                          <tr>
+                            <td class="content">
+                              <h5 class="heading">Eat Healthier</h5>
+                              <p style="font-size: 14px; line-height: 22px">
+                                Get detailed insight into the calorie intake and
+                                nutritional details of whatever youconsume every
+                                day by logging in your meals into the built-in
+                                calorie tracker. you can even suggest us to
+                                include your favorite food items if you can't
+                                find them on our list.
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!--------------double section-------------- -->
+        <!-- -------------watch section-------- -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-column" style="padding: 25px 0px">
+                  <table class="left-column">
+                    <tr>
+                      <td style="padding: 0px 25px">
+                        <table>
+                          <tr>
+                            <td>
+                              <p style="font-size: 14px; line-height: 22px">
+                                Learn how to sync your smartwatch or a fitness
+                                band with the Vantage Fit app
+                                <strong style="text-decoration-line: underline"
+                                  >here</strong
+                                >
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table class="right-column">
+                    <tr>
+                      <td>
+                        <table>
+                          <tr>
+                            <td>
+                              <img
+                                src="/images/smart-devices.png"
+                                alt="Food-img"
+                                style="
+                                  width: 150px;
+                                  max-width: 150px;
+                                  object-fit: contain;
+                                  padding: 15px;
+                                "
+                              />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- ------------------team section------------- -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td style="padding: 15px 22px 22px 22px; line-height: 22px">
+                  <p>Team, <br />Vantage Fit</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- ----------------footer section----------- -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td
+                  style="
+                    background-color: #f7f7f7;
+                    text-align: center;
+                    padding: 10px 0px 20px 0px;
+                  "
+                >
+                  <p style="font-size: 13px; letter-spacing: 1px">
+                    Having Trouble with somthing?
+                  </p>
+                  <p
+                    style="
+                      font-size: 13px;
+
+                      font-weight: 600;
+                    "
+                  >
+                    Reach out to us <span>support@vantagecircle.com</span>
+                  </p>
+                  <table width="100%">
+                    <tr>
+                      <td>
+                        <img
+                          src="/images/vc-footer-logo.png"
+                          style="
+                            width: 120px;
+                            max-width: 120px;
+                            object-fit: contain;
+                          "
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>
